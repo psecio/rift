@@ -4,3 +4,7 @@ div.output-div {
     background-color: #EEEEEE;
     font-size: 15px;
 }
+.section-header {
+    font-size: 18px;
+    font-weight: bold;
+}
