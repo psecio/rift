@@ -1,0 +1,13 @@
+{
+    "minimum-stability": "dev",
+    "require": {
+        "slim/slim": "^3.3",
+        "slim/twig-view": "^2.1",
+        "slim/flash": "^0.1.0",
+        "slim/csrf": "^0.6.0",
+        "enygma/modler": "^2.1",
+        "robmorgan/phinx": "^0.5.3",
+        "vlucas/phpdotenv": "^2.2",
+        "martynbiz/slim3-controller": "dev-master"
+    }
+}
