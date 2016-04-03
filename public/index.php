@@ -54,4 +54,32 @@ $app->group('/xss', function () use ($app) {
     $app->get('/delete/{id}', $controller('delete'));
 });
 
+/** CSRF Routes **/
+$app->group('/csrf', function () use ($app) {
+    $controller = new App\Controller\CsrfController($app);
+
+    $app->get('/', $controller('index'));
+});
+
+/** Direct Object Reference Routes **/
+$app->group('/dor', function () use ($app) {
+    $controller = new App\Controller\DirectObjController($app);
+
+    $app->get('', $controller('index'));
+});
+
+/** Remote File Include Routes **/
+$app->group('/rfi', function () use ($app) {
+    $controller = new App\Controller\RfiController($app);
+
+    $app->get('', $controller('index'));
+});
+
+/** Local File Include Routes **/
+$app->group('/lfi', function () use ($app) {
+    $controller = new App\Controller\LfiController($app);
+
+    $app->get('', $controller('index'));
+});
+
 $app->run();
