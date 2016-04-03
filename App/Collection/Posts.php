@@ -8,7 +8,6 @@ class Posts extends \Modler\Collection\Mysql
     {
         $sql = 'select * from posts';
         $results = $this->fetch($sql);
-error_log(print_r($results, true));
 
         foreach ($results as $result) {
             $post = new \App\Model\Post($this->getDb(), $result);
