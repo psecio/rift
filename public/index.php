@@ -58,7 +58,7 @@ $app->group('/xss', function () use ($app) {
 $app->group('/csrf', function () use ($app) {
     $controller = new App\Controller\CsrfController($app);
 
-    $app->get('/', $controller('index'));
+    $app->get('', $controller('index'));
 });
 
 /** Direct Object Reference Routes **/
@@ -78,6 +78,13 @@ $app->group('/rfi', function () use ($app) {
 /** Local File Include Routes **/
 $app->group('/lfi', function () use ($app) {
     $controller = new App\Controller\LfiController($app);
+
+    $app->get('', $controller('index'));
+});
+
+/** SQL Injection Routes **/
+$app->group('/sqli', function () use ($app) {
+    $controller = new App\Controller\SqliController($app);
 
     $app->get('', $controller('index'));
 });
