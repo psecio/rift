@@ -10,13 +10,16 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Rift: A Vulnerable Application</title>
+    <title>Rift: A Learning Application</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/site.css" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
 
     <script src="/assets/js/jquery-1.12.2.min.js"></script>
+
+    <script src="/assets/js/highlight.pack.js"></script>
   </head>
 
   <body>
@@ -39,10 +42,11 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exercises <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="/xss">Cross-Site Scripting (XSS)</a></li>
+                    <li><a href="/sqli">SQL Injection (SQLi)</a></li>
                     <li><a href="/csrf">Cross-Site Request Forgery (CSRF)</a></li>
                     <li><a href="/dor">Direct Object Reference</a></li>
                     <li><a href="/rfi">Remote File Include (RFI)</a></li>
-                    <li><a href="/lfi">Local File Injection</a></li>
+                    <li><a href="/lfi">Local File Injection (LFI)</a></li>
                 </ul>
             </li>
           </ul>
@@ -60,5 +64,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/assets/js/bootstrap.min.js"></script>
+    <script>$(function() { hljs.initHighlightingOnLoad(); });</script>
   </body>
 </html>

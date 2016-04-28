@@ -26,7 +26,7 @@
     </p>
     <p>
         <b>Example:</b>
-        <pre><code syntax="php">&lt;?php echo htmlspecialchars($_GET['username'], ENT_QUOTES, 'UTF-8'); ?></code></pre>
+        <pre><code class="php">&lt;?php echo htmlspecialchars($_GET['username'], ENT_QUOTES, 'UTF-8'); ?></code></pre>
     </p>
 {% endif %}
 
