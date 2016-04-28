@@ -12,4 +12,33 @@ user's browser.
 <br/>
 - <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Wikipedia</a>
 </blockquote>
+
+{% if error is defined %}
+    {% if error == true %}
+        <div class="alert alert-danger">Token mismatch - action not taken!</div>
+    {% else %}
+        <div class="alert alert-success">Thanks for logging in!</div>
+    {% endif %}
+{% endif %}
+
+<div class="col-md-6">
+<form method="POST" action="/csrf" class="form">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" name="username" class="form-control" id="username"/>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" class="form-control" id="password"/>
+    </div>
+    <div class="form-group">
+        <input type="submit" name="sub" value="Submit" class="btn"/>
+    </div>
+
+    <input type="hidden" name="csrf-hash" value="{{ csrfHash }}">
+</form>
+</div>
+
+<br/>
+
 {% endblock %}

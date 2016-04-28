@@ -34,6 +34,9 @@ $container['db'] = function($container) {
     $dsn = 'sqlite:'.__DIR__.'/../data/rift.db';
     return new \PDO($dsn);
 };
+$container['csrf'] = function ($c) {
+    return new \Slim\Csrf\Guard;
+};
 
 $app = new \Slim\App($container);
 $app->group('', function () use ($app) {
@@ -59,6 +62,7 @@ $app->group('/csrf', function () use ($app) {
     $controller = new App\Controller\CsrfController($app);
 
     $app->get('', $controller('index'));
+    $app->post('', $controller('indexSubmit'));
 });
 
 /** Direct Object Reference Routes **/
