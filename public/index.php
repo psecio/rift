@@ -78,6 +78,8 @@ $app->group('/rfi', function () use ($app) {
     $controller = new App\Controller\RfiController($app);
 
     $app->get('', $controller('index'));
+    $app->get('/badtext', $controller('badtext'));
+    $app->get('/badcode', $controller('badcode'));
 });
 
 /** Local File Include Routes **/
