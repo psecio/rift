@@ -13,4 +13,16 @@ web applications that provide varying levels of access to enable users to gain e
 - <a href="http://codedx.com/insecure-direct-object-references/">Codedx</a>
 </blockquote>
 
+<h4>Users</h4>
+
+<ul>
+{% for index, user in users %}
+<li><a href="/dor/view/{{ index }}">{{ user.username }}</a></li>
+{% endfor %}
+</ul>
+
+<p>
+    With just the information in the list above, see if you can find information you may not be allowed to see.
+</p>
+
 {% endblock %}

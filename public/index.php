@@ -70,6 +70,7 @@ $app->group('/dor', function () use ($app) {
     $controller = new App\Controller\DirectObjController($app);
 
     $app->get('', $controller('index'));
+    $app->get('/view/{id}', $controller('view'));
 });
 
 /** Remote File Include Routes **/
