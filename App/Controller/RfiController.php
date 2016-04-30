@@ -32,7 +32,7 @@ class RfiController extends BaseController
                 $data['isUrl'] = true;
                 include_once($page);
             } else {
-                include_once($path.'/'.$page.'.txt');
+                include_once($path.'/'.$page);
             }
 
             $page = ob_get_clean();
