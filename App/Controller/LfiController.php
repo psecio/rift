@@ -28,10 +28,18 @@ class LfiController extends BaseController
         if ($page !== null) {
             ob_start();
             include_once($path.'/'.$page);
+
+            // Detect the injection
+            $realpath = realpath($path.'/'.$page);
+
+            $pagepath = realpath($path);
+            if (substr($realpath, 0, strlen($pagepath)) !== $pagepath) {
+                $data['isInjection'] = true;
+            }
+
             $page = ob_get_clean();
             $data['page'] = $page;
         }
-        error_log(print_r($data, true));
 
         return $this->render('/lfi/index.php', $data);
     }
