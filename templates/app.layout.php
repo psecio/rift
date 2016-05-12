@@ -41,6 +41,11 @@
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Exercises <span class="caret"></span></a>
                 <ul class="dropdown-menu">
+                    <li><a href="/cookie">Cookie Security</a></li>
+                    <li><a href="/cookie/rememberme">Remember Me</a></li>
+                    <li><a href="/forgot">Forgot Password</a></li>
+                    <li role="separator" class="divider"></li>
+
                     <li><a href="/xss">Cross-Site Scripting (XSS)</a></li>
                     <li><a href="/sqli">SQL Injection (SQLi)</a></li>
                     <li><a href="/csrf">Cross-Site Request Forgery (CSRF)</a></li>
