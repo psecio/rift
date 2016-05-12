@@ -96,4 +96,22 @@ $app->group('/sqli', function () use ($app) {
     $app->get('', $controller('index'));
 });
 
+/** Cookie security Routes **/
+$app->group('/cookie', function () use ($app) {
+    $controller = new App\Controller\CookieController($app);
+
+    $app->get('', $controller('index'));
+    $app->get('/rememberme', $controller('rememberme'));
+});
+
+/** Cookie security Routes **/
+$app->group('/forgot', function () use ($app) {
+    $controller = new App\Controller\ForgotController($app);
+
+    $app->get('', $controller('index'));
+    $app->post('', $controller('indexSubmit'));
+
+    $app->get('/hash/{hash}', $controller('hash'));
+});
+
 $app->run();
