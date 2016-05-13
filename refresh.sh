@@ -1,6 +1,16 @@
 #!/bin/bash
+echo "> Ensuring permissions"
+perm=$(stat -f '%A' data/)
 
-echo "> Refreshing Rift database"
+if [ $perm -ne "777" ]
+then
+    chmod -R 777 data/
+    echo -e "\033[0;32m> Changing permissions on data/ directory\033[0m"
+else
+    echo -e "\033[0;32m> Permissions are good!\033[0m"
+fi
+
+echo "> Refreshing Rift database (data/rift.db)"
 FILE="data/rift.db"
 
 sqliteLoc=`which sqlite3`
