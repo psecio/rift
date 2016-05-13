@@ -104,7 +104,7 @@ $app->group('/cookie', function () use ($app) {
     $app->get('/rememberme', $controller('rememberme'));
 });
 
-/** Cookie security Routes **/
+/** Forgot password Routes **/
 $app->group('/forgot', function () use ($app) {
     $controller = new App\Controller\ForgotController($app);
 
@@ -112,6 +112,13 @@ $app->group('/forgot', function () use ($app) {
     $app->post('', $controller('indexSubmit'));
 
     $app->get('/hash/{hash}', $controller('hash'));
+});
+
+$app->group('/upload', function() use ($app) {
+    $controller = new App\Controller\UploadController($app);
+
+    $app->get('', $controller('index'));
+    $app->post('', $controller('indexSubmit'));
 });
 
 $app->run();

@@ -44,6 +44,7 @@
                     <li><a href="/cookie">Cookie Security</a></li>
                     <li><a href="/cookie/rememberme">Remember Me</a></li>
                     <li><a href="/forgot">Forgot Password</a></li>
+                    <li><a href="/upload">File Upload</a></li>
                     <li role="separator" class="divider"></li>
 
                     <li><a href="/xss">Cross-Site Scripting (XSS)</a></li>
