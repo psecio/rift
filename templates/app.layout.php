@@ -13,7 +13,7 @@
     <title>Rift: A Learning Application</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/simplex-bootstrap.min.css" rel="stylesheet">
     <link href="/assets/css/site.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/highlightjs.css">
 
