@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Rift</a>
+          <a class="navbar-brand" href="/">Rift</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -45,6 +45,7 @@
                     <li><a href="/cookie/rememberme">Remember Me</a></li>
                     <li><a href="/forgot">Forgot Password</a></li>
                     <li><a href="/upload">File Upload</a></li>
+                    <li><a href="/password">Password Hashing</a></li>
                     <li role="separator" class="divider"></li>
 
                     <li><a href="/xss">Cross-Site Scripting (XSS)</a></li>
