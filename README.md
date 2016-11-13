@@ -1,6 +1,12 @@
 ## Rift: Teaching Application Security
 
+### Requirements
 
+You'll need the following to run the Rift application
+
+- At least PHP 5.5 installed locally (and potentially in Apache)
+- SQLite support
+- An open mind, ready to learn about web application security!
 
 ### Setup
 
