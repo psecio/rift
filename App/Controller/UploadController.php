@@ -8,6 +8,9 @@ class UploadController extends BaseController
     public function index()
     {
         $data = [];
+        $uploadPath = realpath(__DIR__.'/../../data/uploads');
+        $data['files'] = $this->getFiles($uploadPath);
+
         return $this->render('/upload/index.php', $data);
     }
     public function indexSubmit()
@@ -33,6 +36,21 @@ class UploadController extends BaseController
 
         return $this->render('/upload/index.php', $data);
     }
+
+    /**
+     * Using this pass-through script we can check permissions and plenty of other things
+     */
+    public function view($filename)
+    {
+        $uploadPath = realpath(__DIR__.'/../../data/uploads');
+
+        $filePath = $uploadPath.'/'.$filename;
+        if (!is_file($filePath)) {
+            echo "Invalid file or you don't have access!";
+        }
+        echo file_get_contents($filePath);
+    }
+
     private function getFiles($path)
     {
         $files = [];
