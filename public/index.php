@@ -5,7 +5,7 @@ require_once __DIR__.'/../vendor/autoload.php';
 // See if we need to turn off XSS protection
 $url = parse_url($_SERVER['REQUEST_URI']);
 if (strstr($url['path'], '/xss') !== false) {
-    header('X-XSS-Protection: 0');
+    // header('X-XSS-Protection: 0');
 }
 
 spl_autoload_register(function($class) {
@@ -116,6 +116,15 @@ $app->group('/forgot', function () use ($app) {
 
 $app->group('/upload', function() use ($app) {
     $controller = new App\Controller\UploadController($app);
+
+    $app->get('', $controller('index'));
+    $app->post('', $controller('indexSubmit'));
+
+    $app->get('/view/{filename}', $controller('view'));
+});
+
+$app->group('/password', function() use ($app) {
+    $controller = new App\Controller\PasswordController($app);
 
     $app->get('', $controller('index'));
     $app->post('', $controller('indexSubmit'));
