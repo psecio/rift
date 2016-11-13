@@ -33,7 +33,7 @@
     </select>
     </div>
     <div class="col-md-2">
-        <a href="/cookie?set-cookies=1" class="btn btn-success">Get cookie value</a>
+        <a href="#" id="get-cookie-value" class="btn btn-success">Get cookie value</a>
     </div>
 </div>
 
@@ -45,9 +45,16 @@
 
 <script>
 $(function() {
-    $('#name-form').submit(function(e) {
+    $('#get-cookie-value').on('click', function(e) {
         e.preventDefault();
+        var cookieName = $('#cookie-names').val();
+        alert(getCookie(cookieName));
     });
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return decodeURIComponent(parts.pop().split(";").shift());
+    }
 });
 </script>
 {% endblock %}
