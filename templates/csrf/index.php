@@ -13,6 +13,12 @@ user's browser.
 - <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Wikipedia</a>
 </blockquote>
 
+<p>
+    A CSRF token has been generated and added as a hidden field to the form below. It has also been saved to the session so that when the form
+    is submitted they can be compared. If they match, the form was submitted on our site and by the current user (the one who belongs to the
+    session).
+</p>
+
 {% if error is defined %}
     {% if error == true %}
         <div class="alert alert-danger">Token mismatch - action not taken!</div>
