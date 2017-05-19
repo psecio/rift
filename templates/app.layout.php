@@ -46,6 +46,7 @@
                     <li><a href="/forgot">Forgot Password</a></li>
                     <li><a href="/upload">File Upload</a></li>
                     <li><a href="/password">Password Hashing</a></li>
+                    <li><a href="/ratelimit">Rate Limiting</a></li>
                     <li role="separator" class="divider"></li>
 
                     <li><a href="/xss">Cross-Site Scripting (XSS)</a></li>

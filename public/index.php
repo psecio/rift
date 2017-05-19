@@ -28,6 +28,11 @@ $container['view'] = function($container) {
         $container['router'],
         $container['request']->getUri()
     ));
+
+    $env = $view->getEnvironment();
+    $env->enableDebug();
+    $view->addExtension(new Twig_Extension_Debug());
+
     return $view;
 };
 $container['db'] = function($container) {
@@ -128,6 +133,12 @@ $app->group('/password', function() use ($app) {
 
     $app->get('', $controller('index'));
     $app->post('', $controller('indexSubmit'));
+});
+
+$app->group('/ratelimit', function() use ($app) {
+    $controller = new App\Controller\RateLimitController($app);
+
+    $app->get('', $controller('index'));
 });
 
 $app->run();
