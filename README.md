@@ -23,6 +23,14 @@ chmod -R 777 data/
 /usr/bin/sqlite3 data/rift.db < init.sql
 ```
 
+You'll also need to install the dependencies with [Composer](https://getcomposer.org) so from the root directory run:
+
+```
+composer install
+```
+
+You'll need to already have Composer setup to run this. The Composer site has a great install guide for that.
+
 ### Starting it up
 
 You can start up the application in two different ways. You can either use the built-in PHP web server:
