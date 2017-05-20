@@ -28,5 +28,10 @@ depending on the sensitivity of the data handled by the vulnerable site and the 
 <p>
     DOM XSS is an injection purely on the client side, no server interaction.
 </p>
+<br/>
+<a class="section-header" href="/xss/zend">Zend-Escaper</a>
+<p>
+    Example using the Zend-Escaper component
+</p>
 
 {% endblock %}

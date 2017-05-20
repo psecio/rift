@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 use App\Controller\BaseController;
+use Zend\Escaper\Escaper;
 
 class XssController extends BaseController
 {
@@ -63,5 +64,21 @@ class XssController extends BaseController
     {
         $data = [];
         return $this->render('/xss/dom.php', $data);
+    }
+    public function zend()
+    {
+        $escaper = new Escaper('UTF-8');
+        $content = [
+            'html' => $escaper->escapeHtml('<script>alert("zf")</script>'),
+            'htmlAttr' => $escaper->escapeHtmlAttr("<script>alert('zf')</script>"),
+            'js' => $escaper->escapeJs("bar&quot;; alert(&quot;zf&quot;); var xss=&quot;true"),
+            'css' => $escaper->escapeCss("background-image: url('/zf.png?</style><script>alert(\'zf\')</script>');"),
+            'url' => $escaper->escapeUrl('/foo " onmouseover="alert(\'zf\')')
+        ];
+
+        $data = [
+            'content' => $content
+        ];
+        return $this->render('/xss/zend.php', $data);
     }
 }

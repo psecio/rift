@@ -60,6 +60,7 @@ $app->group('/xss', function () use ($app) {
     $app->post('/stored', $controller('addPost'));
     $app->get('/dom', $controller('dom'));
     $app->get('/delete/{id}', $controller('delete'));
+    $app->get('/zend', $controller('zend'));
 });
 
 /** CSRF Routes **/
