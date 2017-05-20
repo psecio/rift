@@ -8,6 +8,7 @@
         "enygma/modler": "^2.1",
         "robmorgan/phinx": "^0.5.3",
         "vlucas/phpdotenv": "^2.2",
-        "martynbiz/slim3-controller": "dev-master"
+        "martynbiz/slim3-controller": "dev-master",
+        "zendframework/zend-escaper": "^2.5"
     }
 }
