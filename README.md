@@ -60,3 +60,9 @@ and add it to your `/etc/hosts`:
 ### Lessons
 
 Each of the lessons in Rift can be found under the "Exercises" option in the menubar at the top of the site.
+
+### Tips
+
+1. If you get database errors, be sure you've created the database with the `sqlite3` command above.
+2. Be sure the `data/rift.db` file can be written to by the web server user
+3. If you don't already have Composer, you can get it from https://getcomposer.org
