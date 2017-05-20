@@ -17,7 +17,8 @@ class RememberMe
             $_SERVER['HTTP_USER_AGENT'],
             $user->username,
             $user->email,
-            $user->id
+            $user->id,
+            time()
         ];
         return hash('sha256', implode('|', $data));
     }
@@ -53,7 +54,6 @@ class RememberMe
             // Save it on the user record
             $user->remember = $this->setRememberMe($user);
             $user->save();
-
         }
         return false;
     }
