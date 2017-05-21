@@ -35,7 +35,7 @@
 <h4>Files</h4>
 
 {% for file in files %}
-<a href="/upload/view/{{ file }}" target="_new">{{ file }}</a><br/>
+<a href="/upload/view?filename={{ file }}" target="_new">{{ file }}</a><br/>
 {% endfor %}
 
 {% endif %}

@@ -126,7 +126,7 @@ $app->group('/upload', function() use ($app) {
     $app->get('', $controller('index'));
     $app->post('', $controller('indexSubmit'));
 
-    $app->get('/view/{filename}', $controller('view'));
+    $app->get('/view', $controller('view'));
 });
 
 $app->group('/password', function() use ($app) {

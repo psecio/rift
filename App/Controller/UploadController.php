@@ -40,8 +40,9 @@ class UploadController extends BaseController
     /**
      * Using this pass-through script we can check permissions and plenty of other things
      */
-    public function view($filename)
+    public function view()
     {
+        $filename = $this->request->getParam('filename');
         $uploadPath = realpath(__DIR__.'/../../data/uploads');
 
         $filePath = $uploadPath.'/'.$filename;
