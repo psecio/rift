@@ -23,7 +23,9 @@ $dotenv->load();
 
 $container = new \Slim\Container();
 $container['view'] = function($container) {
-    $view = new \Slim\Views\Twig(__DIR__.'/../templates');
+    $view = new \App\View\TemplateView(__DIR__.'/../templates');
+    $view['container'] = $container;
+
     $view->addExtension(new \Slim\Views\TwigExtension(
         $container['router'],
         $container['request']->getUri()
@@ -140,6 +142,18 @@ $app->group('/ratelimit', function() use ($app) {
     $controller = new App\Controller\RateLimitController($app);
 
     $app->get('', $controller('index'));
+});
+
+$app->group('/auth', function() use ($app) {
+    $controller = new App\Controller\AuthController($app);
+
+    $app->get('', $controller('index'));
+
+    $app->get('/signup', $controller('signup'));
+    $app->post('/signup', $controller('signupSubmit'));
+
+    $app->get('/login', $controller('login'));
+    $app->post('/login', $controller('loginSubmit'));
 });
 
 $app->run();
