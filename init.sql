@@ -20,6 +20,11 @@ INSERT INTO `users`
 VALUES
 ('Eli White', 'eliw', '$2y$10$sZfRgLzsJeonIYrlDAOPleHA0scBBHoSyV6Ev8KWGGpogkX/vyYL.', null, null, 1459694993, 1459694993);
 
+INSERT INTO `users`
+(`name`, 'username', `password`, `remember`, `forgot`, `created`, `updated`)
+VALUES
+('Administrator', 'admin', '$2y$10$YnMqIbLtriIHEUNe/qqTa.UOkpGkR0Dw4CDnIHmw7hNtVzwCQb3..', null, null, 1459694993, 1459694993);
+
 CREATE TABLE IF NOT EXISTS `posts` (
     `title` VARCHAR(100),
     `content` TEXT,
