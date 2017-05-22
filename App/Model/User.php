@@ -24,6 +24,9 @@ class User extends \App\Model\Sqlite
         'forgot' => [
             'column' => 'forgot'
         ],
+        'name' => [
+            'column' => 'name'
+        ],
         'id' => [
             'column' => 'id'
         ],
