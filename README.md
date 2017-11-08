@@ -59,7 +59,21 @@ and add it to your `/etc/hosts`:
 
 ### Lessons
 
-Each of the lessons in Rift can be found under the "Exercises" option in the menubar at the top of the site.
+Each of the lessons in Rift can be found under the "Exercises" option in the menubar at the top of the site. Topics currently covered are:
+
+- Cookie security
+- Remember Me handling
+- Forgot Password
+- File Uploads
+- Password Hashing
+- Rate Limiting
+- Cross-Site Scripting (XSS)
+- SQL Injection (SQLi)
+- Cross-Site Request Forgery (CSRF)
+- Direct Object Reference
+- Remote File Include (RFI)
+- Local File Injection (LFI)
+- Open Redirect
 
 ### Tips
 
