@@ -55,6 +55,7 @@
                     <li><a href="/dor">Direct Object Reference</a></li>
                     <li><a href="/rfi">Remote File Include (RFI)</a></li>
                     <li><a href="/lfi">Local File Injection (LFI)</a></li>
+                    <li><a href="/openredirect">Open Redirect</a></li>
                 </ul>
             </li>
           </ul>

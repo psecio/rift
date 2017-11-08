@@ -156,4 +156,12 @@ $app->group('/auth', function() use ($app) {
     $app->post('/login', $controller('loginSubmit'));
 });
 
+$app->group('/openredirect', function() use ($app) {
+    $controller = new App\Controller\OpenRedirectController($app);
+
+    $app->get('', $controller('index'));
+    $app->get('/success', $controller('success'));
+    $app->get('/github', $controller('github'));
+});
+
 $app->run();
