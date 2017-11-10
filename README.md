@@ -37,7 +37,7 @@ You can start up the application in two different ways. You can either use the b
 
 ```
 cd public
-php -S localhost:81111
+php -S localhost:8111
 ```
 
 or you can set up a `VirtualHost` in Apache pointing it to the `public/` directory (with your own paths
