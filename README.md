@@ -80,3 +80,20 @@ Each of the lessons in Rift can be found under the "Exercises" option in the men
 1. If you get database errors, be sure you've created the database with the `sqlite3` command above.
 2. Be sure the `data/rift.db` file can be written to by the web server user
 3. If you don't already have Composer, you can get it from https://getcomposer.org
+
+### Resources
+
+- [Open Web Application Security Project - OWASP](https://owasp.org)
+- [OWASP Top 10](https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project)
+- [Websec.io](https://websec.io)
+- [Duo Security](https://duo.com) (push/SMS for TFA)
+- [Authy](https://authy.com) (push/SMS for TFA)
+- [sqlmap](http://sqlmap.org) for SQL injection testing
+- [John the Ripper](http://www.openwall.com/john/) for password cracking
+- [Let's Encrypt](https://letsencrypt.org/) for free SSL/TLS certificates
+- [password_hash polyfill - password_compat](https://github.com/ircmaxell/password_compat)
+- [Zend Framework ACL component](https://framework.zend.com/manual/2.2/en/modules/zend.permissions.acl.intro.html)
+- [Laravel authorization](https://laravel.com/docs/5.5/authorization)
+- [Symfony security](https://symfony.com/doc/current/security)
+- [defuse-php encryption library](https://github.com/defuse/php-encryption)
+- [iniscan](https://github.com/psecio/iniscan) for security scanning the `php.ini`
