@@ -57,6 +57,7 @@
                     <li><a href="/lfi">Local File Injection (LFI)</a></li>
                     <li><a href="/openredirect">Open Redirect</a></li>
                     <li><a href="/tfa">Two-factor Authentication</a></li>
+                    <li><a href="/csp">Content Security Policy (CSP)</a></li>
                 </ul>
             </li>
           </ul>

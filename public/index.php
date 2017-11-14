@@ -171,4 +171,10 @@ $app->group('/tfa', function() use ($app) {
     $app->post('', $controller('indexSubmit'));
 });
 
+$app->group('/csp', function() use ($app) {
+    $controller = new App\Controller\CspController($app);
+
+    $app->get('', $controller('index'));
+})->add(new App\Middleware\Csp());
+
 $app->run();
