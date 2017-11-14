@@ -164,4 +164,11 @@ $app->group('/openredirect', function() use ($app) {
     $app->get('/github', $controller('github'));
 });
 
+$app->group('/tfa', function() use ($app) {
+    $controller = new App\Controller\TfaController($app);
+
+    $app->get('', $controller('index'));
+    $app->post('', $controller('indexSubmit'));
+});
+
 $app->run();

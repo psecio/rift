@@ -9,6 +9,7 @@
         "robmorgan/phinx": "^0.5.3",
         "vlucas/phpdotenv": "^2.2",
         "martynbiz/slim3-controller": "dev-master",
-        "zendframework/zend-escaper": "^2.5"
+        "zendframework/zend-escaper": "^2.5",
+        "enygma/gauth": "dev-downgrade-compat"
     }
 }
