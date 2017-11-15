@@ -97,3 +97,14 @@ Each of the lessons in Rift can be found under the "Exercises" option in the men
 - [Symfony security](https://symfony.com/doc/current/security)
 - [defuse-php encryption library](https://github.com/defuse/php-encryption)
 - [iniscan](https://github.com/psecio/iniscan) for security scanning the `php.ini`
+- [Google reCAPTCHA](https://www.google.com/recaptcha/intro/index.html)
+- [Breakout escaping library](https://github.com/salesforce/breakout)
+- [Zend\Escaper component](https://github.com/zendframework/zend-escaper)
+- [Skipfish](https://code.google.com/archive/p/skipfish/)
+- [Burp Suite](https://portswigger.net/burp)
+- [OWASP ZAP](https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project)
+- [psecio/versionscan](https://github.com/psecio/versionscan) for finding vulnerabilities related to your PHP version
+- [Kali linux distribution](https://tools.kali.org/)
+- [Symfony security advisories](https://github.com/FriendsOfPHP/security-advisories)
+- [content-security-policy.com](https://content-security-policy.com)
+- [Google on Content Security Policy](https://developers.google.com/web/fundamentals/security/csp/)
