@@ -108,3 +108,4 @@ Each of the lessons in Rift can be found under the "Exercises" option in the men
 - [Symfony security advisories](https://github.com/FriendsOfPHP/security-advisories)
 - [content-security-policy.com](https://content-security-policy.com)
 - [Google on Content Security Policy](https://developers.google.com/web/fundamentals/security/csp/)
+- [XSSHunter.com](https://xsshunter.com/features)
